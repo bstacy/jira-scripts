@@ -3,7 +3,7 @@
 <workflow>
   <meta name="jira.description">For Defect Only</meta>
   <meta name="jira.update.author.key">brian.stacy</meta>
-  <meta name="jira.updated.date">1519327339541</meta>
+  <meta name="jira.updated.date">1519241312569</meta>
   <initial-actions>
     <action id="1" name="Create">
       <validators>
@@ -1262,6 +1262,12 @@ if(issue?.getCustomFieldValue(cfCBLProductArea)?.size&gt;1){
           <results>
             <unconditional-result old-status="null" status="null" step="16">
               <post-functions>
+                <function type="class">
+                  <arg name="field">customfield_11100</arg>
+                  <arg name="full.module.key">com.innovalog.jmwe.jira-misc-workflow-extensionsIncreaseFieldValue-function</arg>
+                  <arg name="class.name">com.innovalog.jmwe.plugins.functions.IncreaseFieldValueFunction</arg>
+                  <arg name="useGroovyCondition">false</arg>
+                </function>
                 <function type="class">
                   <arg name="sourceField">customfield_11101</arg>
                   <arg name="ignoreEmptyValue">no</arg>
